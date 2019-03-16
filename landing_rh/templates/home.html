@@ -1,13 +1,57 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
 </head>
 <body>
-    <h1>essa é a home</h1>
-    <a href="cadastro">essa eh a pagina do cadastro</a>
+    <div id="grid" >
+        <header class="header">
+            <a href="" class="logo"><span>RH:</span>explica</a>
+            <ul class="menu">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#contato">Contato</a></li>
+              <li><a href="#contribua">Contribua</a></li>
+            </ul>
+        </header>
+        <nav>
+            <div>
+                <img src="static/imagens/Modelos.png" alt="">
+                <a href="">Modelos de Contração</a>
+            </div>
+
+            <div>
+                <img src="static/imagens/Desempregado.png" alt="">
+                <a href="">Desempregado</a>
+            </div>
+
+            <div>
+                <img src="static/imagens/Impostos.png" alt="">
+                <a href="">Impostos</a>
+            </div>
+
+            <div>
+                <img src="static/imagens/Aposentado.png" alt="">
+                <a href="">Aposentado</a>
+            </div>
+        </nav>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod commodi </p>
+            <div>
+                <input placeholder="O que você procura?" type="text">
+                <div id='botao'><button><img src="static/imagens/buscar.svg" alt=""></button></div>
+            </div>
+        </section>
+        <aside></aside>
+        <footer></footer>
+        <!-- <a href="cadastro">essa eh a pagina do cadastro</a> -->
+    </div>
 </body>
 </html>
