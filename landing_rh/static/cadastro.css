@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+#grid{
+    display: grid;
+    grid-template-areas: 'header header header'
+                         'nav nav nav'
+                         'section section section';
+    grid-auto-rows: 10vh 15vh 100vh;
+}
+
+header{
+    grid-area: header;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 90%;
+    font-family: 'Noto Sans JP', sans-serif;
+    padding-right: 2vw;
+}
+
+header ul li{
+    padding: 0 1.5vw;
+    height: inherit;
+}
+
+header a{
+    color: black;
+    font-size: 15px;
+}
+
+header .logo {
+    width: 10%;
+    margin-left: 3vw;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 30px;
+    color: black;
+}
+
+header span{
+    color: rgb(240, 50, 50);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bolder;
+}
+
+header li:hover{
+    background-color: rgba(102, 45, 145, 0.11);
+    height: 10vh;
+    display: flex; 
+    align-items: center;
+}
+
+nav{
+    grid-area: nav;
+    background-color:  rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: solid;
+    border-top-width: 2px;
+    border-top-color: rgb(228, 228, 228);
+}
+nav div{
+    display: flex;
+    align-items: center;
+}
+
+ nav img{
+     height: 60px;
+     width: auto;
+     padding-right: 10px;
+ }
+ nav a{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+ }
+ nav div:nth-child(1) a{
+     color: #009245;
+    width: 90px;
+ }
+
+ nav div:nth-child(2) a{
+    color: rgb(236, 214, 14);
+   width: 80px;
+ }
+
+ nav div:nth-child(3) a{
+    color: #29ABE2;
+   width: 80px;
+ }
+
+ nav div:nth-child(4) a{
+    color: #F7931E;
+   width: 80px;
+ }
+
+ section{
+     grid-area: section;
+     background-image: url('./imagens/form-menor.jpg');
+     background-size: cover;  
+     display: flex;
+     justify-content: center;
+     padding: 50px;
+ }
+ section div{
+     height: 200px;
+     width: 400px;
+     background-color: white;
+     border: solid;
+     border-color: rgb(240, 50, 50);
+     border-width: 5px;
+     border-radius: 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+ }
+ section div h1{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    color: rgb(240, 50, 50);
+    width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+ }
+ section div form{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    width: 230px;
+ }
+ #submit{
+     margin-top: 10px;
+     background-color: rgb(240, 50, 50);
+     color: white;
+     border: none;
+     height: 35px;
+     width: 65px;
+     border-radius: 80px;
+ }
+ 

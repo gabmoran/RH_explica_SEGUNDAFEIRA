@@ -5,7 +5,9 @@ from .forms import NewsletterForm
 def retornar_home(request):
     return render(request,'home.html')
 
+def retornar_clt(request):
+    return render(request,'clt.html')
+
 def retornar_cadastro(request):
-    
     return render(request,'cadastro.html', {'form': NewsletterForm})
 

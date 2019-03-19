@@ -7,21 +7,22 @@
 }
 body{
     width: 100vw;
-    background-color: rgb(230, 230, 230);
-    overflow: hidden;
+    background-color: white;
 }
 #grid{
     display: grid;
     grid-template-areas: 'header header header'
                          'nav nav nav'
-                         'section section aside'
-                         'footer footer footer';
-    grid-auto-rows: 10vh 15vh 50vh 100vh;
+                         'section section section'
+                         'aside aside aside'
+                         'footer footer footer'
+                         'fim fim fim';
+    grid-auto-rows: 10vh 15vh 75vh 170vh 100vh 10vh;
 }
 
 header{
     grid-area: header;
-    background-color: rgb(243, 243, 243);
+    background-color: white;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -56,7 +57,7 @@ header .logo {
 }
 
 header span{
-    color: #662D91;
+    color: rgb(240, 50, 50);
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bolder;
 }
@@ -70,7 +71,7 @@ header li:hover{
 
 nav{
     grid-area: nav;
-    background-color:  rgb(243, 243, 243);
+    background-color:  white;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -86,7 +87,7 @@ nav div{
  nav img{
      height: 60px;
      width: auto;
-     padding-right: 10px;
+     padding-right: 6px;
  }
  nav a{
     font-family: 'Noto Sans JP', sans-serif;
@@ -95,7 +96,7 @@ nav div{
  }
  nav div:nth-child(1) a{
      color: #009245;
-    width: 80px;
+    width: 90px;
  }
 
  nav div:nth-child(2) a{
@@ -115,8 +116,16 @@ nav div{
 
  section{
      grid-area: section;
-     background-image: url('./imagens/pesquisa.jpg');
-     background-size: cover;
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     padding: 40px;
+    justify-content: space-evenly;
+    background-image: url('./imagens/mulher.jpg');  
+    background-repeat: no-repeat;
+    background-position-x: 800px;
+    background-position-y: 60px;
+    background-size: 40%;
  }
 
  section input{
@@ -130,11 +139,11 @@ nav div{
     padding-left: 20px;
     border-left: 20px;
     border: solid;
-    border-color: #662D91;
+    border-color: rgb(240, 50, 50);
  }
 
  section button{
-    background-color: #662D91;
+    background-color: rgb(240, 50, 50);
     color: white;
     border: none;
     cursor: pointer;
@@ -143,19 +152,18 @@ nav div{
  }
 
  section #botao{
-    background-color: #662D91;
+    background-color: rgb(240, 50, 50);
     border-top-right-radius: 80px;
     border-bottom-right-radius: 80px;
     width: 30px;
     height: 5vh;
  }
 
- section {
-    display: flex;
-    flex-direction: row;
-    width: 65vw;
-    padding: 50px;
-    justify-content: space-around;
+
+section h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    width: 70%;
 }
 
 ::-webkit-input-placeholder{
@@ -165,8 +173,11 @@ nav div{
 section p{
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 20px;
-    font-weight: bold;
-    width: 30%;
+    width: 60%;
+}
+
+section input:hover{
+    cursor: text;
 }
 
 section div{
@@ -184,13 +195,215 @@ section button img{
     width: auto;
 }
 
- aside{
+section .mulher{
+    width: 30vw;
+    height: auto;
+    align-self: flex-end;
+}
+
+aside{
      grid-area: aside;
-     background-color: #009245;
-     width: 35vw;
-     margin-left: 10px;
+     background-color: black;
+     display: flex;
+     justify-content: space-around;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
  }
+
+
+ aside #emlinha{
+     display: flex;
+     flex-direction: row;
+     padding-left: 250px;
+ }
+
+ aside div:nth-child(1) #clt{
+    color: white; 
+    width: 1px;
+    height: 1px;
+    display: flex;
+    padding-left: 34px;
+    padding-top: 10px;
+ }
+
+aside div:nth-child(1) div{
+    width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-right: 80px;
+}
+aside div:nth-child(1) .verde{
+    background-color: #009245;
+}
+aside div:nth-child(1) .amarelo{
+    background-color: #F7E116;
+}
+aside div:nth-child(1) .azul{
+    background-color: #29ABE2;
+}
+aside div:nth-child(1) .laranja{
+    background-color:  #F7931E;
+}
+aside div:nth-child(1) a{
+    width: 80px;
+    height: 80px;
+    border-radius: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+aside div:nth-child(1) h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    margin: 2%;
+    text-align: center;
+    color: #009245;
+}
+aside div:nth-child(1) h3{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    margin: 2%;
+    text-align: center;
+    color: #F7E116;
+}
+aside div:nth-child(1) h4{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    margin: 2%;
+    text-align: center;
+    color: #29ABE2;
+}
+aside div:nth-child(1) h5{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    margin: 2%;
+    text-align: center;
+    color: #F7931E;
+}
+aside div:nth-child(1) ul{
+    padding: 0%;
+    margin: 2%;
+    text-align: center;
+}
+aside div:nth-child(1) li{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    list-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+aside div h1{
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 60px;
+}
+
+aside div p{
+    padding-top: 20px;
+    font-size: 17x;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+aside div ul img{
+    width: 30px;
+    height: auto;
+    padding-right: 10px;
+}
+
+aside div ul{
+    padding-top: 20px;
+}
+
+aside div ul li{
+    color: white;
+}
+
+
  footer{
      grid-area: footer;
-     background-color: #F7931E;
+     background-color: rgb(226, 225, 225);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     padding-top: 40px;
  }
+
+ footer h1{
+    color: rgb(0, 0, 0);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 40px;
+ }
+
+ footer p{
+     padding-top: 20px;
+     padding-bottom: 60px;
+ }
+
+ footer button{
+     border-radius: 100px;
+     background-color: black;
+     width: 210px;
+     height: 40px;
+     color: white;
+     border-style: none;
+ }
+
+ footer button a{
+     color: white;
+     font-size: 12px;
+ }
+
+ footer img{
+     width: 350px;
+     height: auto;
+ }
+
+ fim{
+    grid-area: fim;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+ }
+
+fim a{
+    color: black;
+    font-size: 30px;
+}
+
+fim .logo {
+    width: 10%;
+    margin-left: 3vw;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 30px;
+    color: black;
+}
+
+fim span{
+    color: rgb(240, 50, 50);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bolder;
+}
